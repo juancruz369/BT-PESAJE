@@ -1,0 +1,138 @@
+📌 Pantalla Principal (Visualización de Datos)
+🔹 Función: Mostrar en tiempo real los datos de pesaje recibidos desde RS232 y permitir configuración.
+🔹 Elementos principales:
+✅ Visualización del Peso:
+
+El peso se mostrará resaltado en negro para mayor visibilidad.
+Opción de ingreso manual del peso en caso de error de transmisión.
+Si el peso se ingresa manualmente, en el ticket se imprimirá un aviso en letras pequeñas indicando "INGRESO MANUAL".
+✅ Configuración del Puerto Serial:
+
+Permite modificar los parámetros de comunicación:
+Port, Baud Rate, Parity, Data Bits, Stop Bits, Flow Control.
+Solo el Administrador podrá acceder a esta configuración.
+✅ Botón de Imprimir Ticket (Principal):
+
+Opción para incluir o no la fecha y la hora en el ticket (configuración permanente hasta que el Administrador la modifique).
+El Operador solo podrá imprimir el ticket, sin modificar esta configuración.
+✅ Visualización del Nombre de la Empresa:
+
+Se mostrará en la parte superior de la Pantalla Principal.
+Solo el Administrador podrá modificarlo.
+✅ Texto informativo en la interfaz:
+
+En el margen inferior derecho, se mostrará el texto "by BITTECHNICAL".
+📌 Ticket de Impresión
+🔹 Elementos y formato:
+✅ Nombre de la Empresa:
+
+Aparecerá en la parte superior del ticket.
+Formato: Mayúsculas, negrita, alineado al margen izquierdo y con el mismo tamaño que el Peso en KG.
+✅ Peso en KG:
+
+Resaltado en negro para mayor visibilidad.
+Si el peso fue ingresado manualmente, se imprimirá un aviso en letras pequeñas: "INGRESO MANUAL".
+✅ Fecha y Hora:
+
+Opción para incluirla o no en el ticket (decisión del Administrador).
+📌 Gestión de Usuarios
+✅ Administrador:
+
+Tiene acceso a todas las configuraciones, incluyendo:
+Configuración del puerto serial.
+Modificación del Nombre de la Empresa.
+Activar o desactivar la impresión de fecha y hora en el ticket.
+✅ Operador:
+
+Solo puede realizar funciones básicas, como imprimir el ticket.
+📌 Funcionalidades Extras (Para Futuras Mejoras)
+✅ Historial de Pesajes:
+
+Guardará los registros de los últimos 60 días, incluyendo peso, fecha y hora.
+✅ Exportación de Datos:
+
+Opción para que el usuario pueda exportar los datos a Excel o PDF.
+🔹 ¿Te gustaría agregar o modificar algo antes de que avancemos a la implementación? 😊
+
+
+
+
+
+
+
+Tú dijiste:
+EN PANTALLA PRINCIPAL: agregar: AM BALANZAS S.A , en la parte supeior de la pantalla, centrado y en negrita
+ChatGPT Plus
+Memoria actualizada
+¡Actualización realizada! Ahora, en la Pantalla Principal, se mostrará "AM BALANZAS S.A" en la parte superior, centrado y en negrita.
+
+🔹 ¿Algún otro ajuste que quieras hacer antes de pasar a la implementación? 😊
+
+
+
+
+
+
+Tú dijiste:
+nuevamente dame una actualiazacion de como va la interfaz
+ChatGPT Plus
+Aquí tienes la actualización completa de la interfaz con todas las modificaciones hasta ahora:
+
+📌 Pantalla Principal (Visualización de Datos)
+🔹 Función: Mostrar en tiempo real los datos de pesaje recibidos desde RS232 y permitir configuración.
+🔹 Elementos principales:
+
+✅ Encabezado de la Pantalla:
+
+"AM BALANZAS S.A" en la parte superior, centrado y en negrita.
+✅ Visualización del Nombre de la Empresa:
+
+Se mostrará en la parte superior de la pantalla.
+Solo el Administrador podrá modificarlo.
+✅ Visualización del Peso (Principal):
+
+El peso se mostrará resaltado en negro para mayor visibilidad.
+Opción de ingreso manual del peso en caso de error de transmisión.
+Si el peso se ingresa manualmente, en el ticket se imprimirá un aviso en letras pequeñas indicando "INGRESO MANUAL".
+✅ Configuración del Puerto Serial:
+
+Permite modificar los parámetros de comunicación:
+Port, Baud Rate, Parity, Data Bits, Stop Bits, Flow Control.
+Solo el Administrador podrá acceder a esta configuración.
+✅ Botón de Imprimir Ticket (Principal):
+
+Opción para incluir o no la fecha y la hora en el ticket (configuración permanente hasta que el Administrador la modifique).
+El Operador solo podrá imprimir el ticket, sin modificar esta configuración.
+✅ Texto informativo en la interfaz:
+
+En el margen inferior derecho, se mostrará el texto "by BITTECHNICAL".
+📌 Ticket de Impresión
+🔹 Elementos y formato:
+✅ Nombre de la Empresa:
+
+Aparecerá en la parte superior del ticket.
+Formato: Mayúsculas, negrita, alineado al margen izquierdo y con el mismo tamaño que el Peso en KG.
+✅ Peso en KG:
+
+Resaltado en negro para mayor visibilidad.
+Si el peso fue ingresado manualmente, se imprimirá un aviso en letras pequeñas: "INGRESO MANUAL".
+✅ Fecha y Hora:
+
+Opción para incluirla o no en el ticket (decisión del Administrador).
+📌 Gestión de Usuarios
+✅ Administrador:
+
+Tiene acceso a todas las configuraciones, incluyendo:
+Configuración del puerto serial.
+Modificación del Nombre de la Empresa.
+Activar o desactivar la impresión de fecha y hora en el ticket.
+✅ Operador:
+
+Solo puede realizar funciones básicas, como imprimir el ticket.
+📌 Funcionalidades Extras (Para Futuras Mejoras)
+✅ Historial de Pesajes:
+
+Guardará los registros de los últimos 60 días, incluyendo peso, fecha y hora.
+✅ Exportación de Datos:
+
+Opción para que el usuario pueda exportar los datos a Excel o PDF.
