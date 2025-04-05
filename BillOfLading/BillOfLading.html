@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Porte Electrónica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            border: 2px solid #000;
+            padding: 20px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2, .section-title {
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: underline;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        pre {
+            font-family: monospace;
+            font-size: 16px;
+            white-space: pre-wrap;
+            line-height: 1.5;
+        }
+        input, select {
+            border: none; /* Eliminar los contornos */
+            padding: 5px;
+            font-size: 14px;
+        }
+        input.ancho-grande {
+            width: 400px; /* Ajusta el ancho si necesitas más espacio */
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-container button {
+            font-size: 16px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>CARTA DE PORTE ELECTRÓNICA</h2>
+        <div class="section-title">A- INTERVINIENTES</div>
+        <pre>
+Titular Carta de Porte:          <input type="text" class="ancho-grande" placeholder="CUIT - Nombre Titular">
+Rte. Comercial Venta Primaria:   <input type="text" class="ancho-grande" placeholder="CUIT - Nombre Com. Prim">
+Rte. Comercial Venta Secundaria: <input type="text" class="ancho-grande" placeholder="CUIT - Nombre Com. Sec">
+Destinatario:                    <input type="text" class="ancho-grande" placeholder="CUIT - Nombre Destinatario">
+Destino:                         <input type="text" class="ancho-grande" placeholder="CUIT - Nombre Destino">
+Empresa Transportista:           <input type="text" class="ancho-grande" placeholder="CUIT - Nombre Emp. Transp">
+Flete Pagador:                   <input type="text" class="ancho-grande" placeholder="CUIT - Nombre Flete Pagador">
+Chofer:                          <input type="text" class="ancho-grande" placeholder="CUIT - Nombre Chofer">
+        </pre>
+        <div class="section-title">B- GRANO/ESPECIE</div>
+        <pre>
+Grano:      <input type="text" placeholder="Tipo de grano">  Tipo:     <input type="text" placeholder="Clasificación">
+PESO BRUTO: <input type="text" placeholder="Peso Bruto">  Entrada:  <input type="datetime-local">
+PESO TARA:  <input type="text" placeholder="Peso Tara">  Salida:   <input type="datetime-local">
+PESO NETO:  <input type="text" placeholder="Peso Neto">  Operador: <input type="text" placeholder="Nombre Operador">
+        </pre>
+        <div class="section-title">C- PROCEDENCIA</div>
+        <pre>
+Es un Campo: <select><option>Sí</option><option>No</option></select>  N.º Planta: <input type="text" placeholder="Número de Planta">
+Dirección: <input type="text" class="ancho-grande" placeholder="Direccion">
+Localidad: <input type="text" placeholder="localidad"> Provincia: <input type="text" placeholder="Provincia">
+        </pre>
+        <div class="section-title">D- DESTINO DE LA MERCADERIA</div>
+        <pre>
+Es un Campo: <select><option>Sí</option><option>No</option></select>  N.º Planta: <input type="text" placeholder="Número de Planta">
+Dirección: <input type="text" class="ancho-grande" placeholder="Direccion">
+Localidad: <input type="text" placeholder="localidad"> Provincia: <input type="text" placeholder="Nombre Provincia">
+         </pre>
+        <div class="section-title">E- DATOS DEL TRANSPORTE</div>
+        <pre>
+Dominios: <input type="text" placeholder="Patente chasis"> <input type="text" placeholder="Patente Acoplado">
+Kms a Recorrer: <input type="text" placeholder="Distancia en Km"> Tarifa de Referencia: <input type="text" placeholder="Tarifa en Pesos">
+Tarifa: <input type="text" placeholder="Tarifa Final">
+        </pre>
+        <div class="button-container">
+            <button onclick="window.print()">Imprimir</button>
+        </div>
+    </div>
+</body>
+</html>
