@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peso - Balanza</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #d32f2f;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .peso {
+            font-size: 3em;
+            font-weight: bold;
+            color: #333;
+        }
+        .btn-primary {
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AM BALANZAS S.A</h1>
+        <div class="peso" id="peso">0.00 kg</div>
+        <button class="btn-primary" id="btnConectar" onclick="conectarBalanza()">Conectar Balanza</button>
+        <button class="btn-primary" id="btnImprimir" onclick="imprimirTicket()">Imprimir Ticket</button>
+        <p id="mensajeLicencia" style="color: red; font-weight: bold;"></p>
+    </div>
+
+    <script>
+        async function conectarBalanza() {
+            try {
+                const port = await navigator.serial.requestPort();
+                await port.open({ baudRate: 9600 });
+                const reader = port.readable.getReader();
+                while (true) {
+                    const { value, done } = await reader.read();
+                    if (done) break;
+                    let peso = new TextDecoder().decode(value).trim();
+                    document.getElementById("peso").innerText = peso + " kg";
+                }
+            } catch (error) {
+                alert("Error al conectar la balanza: " + error.message);
+            }
+        }
+
+        function imprimirTicket() {
+            let contenido = document.getElementById("peso").innerText;
+            let ventana = window.open('', '', 'height=400,width=600');
+            ventana.document.write('<html><head><title>Ticket</title></head><body>');
+            ventana.document.write('<h1>AM BALANZAS</h1>');
+            ventana.document.write('<p>Peso: ' + contenido + '</p>');
+            ventana.document.write('</body></html>');
+            ventana.document.close();
+            ventana.print();
+        }
+
+       
+    </script>
+</body>
+</html>
